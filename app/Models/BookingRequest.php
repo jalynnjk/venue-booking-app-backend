@@ -16,6 +16,6 @@ class BookingRequest extends Model
         'budget' => 'integer',
         'ceremony_location' => 'string',
         'reception_location' => 'string',
-        'new_request' => 'Boolean',
+        'new_request' => 'boolean',
     ];
 };
