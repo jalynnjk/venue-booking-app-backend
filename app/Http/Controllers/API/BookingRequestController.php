@@ -28,14 +28,15 @@ class BookingRequestController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'client_name' => 'required|max:100',
-            'client_email' => 'required|max:100',
+            'client_name' => 'required',
+            'client_email' => 'required',
             'wedding_date' => 'required',
             'number_guests' => 'required',
             'budget' => 'required',
             'ceremony_location' => 'required',
             'reception_location' => 'required',
         ]);
+        try{
         $newBookingRequest = new BookingRequest([
             'client_name' => $request->get('client_name'),
             'client_email' => $request->get('client_email'),
@@ -47,6 +48,12 @@ class BookingRequestController extends Controller
         ]);
         $newBookingRequest->save();
         return response()->json($newBookingRequest);
+    } catch(\Exception $e){
+         \Log::error($e->getMessage());
+            return response()->json([
+                'message'=>'There was an error with your request.'
+            ],500);
+    }
     }
 
     /**
