@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('acceptedrequests', function (Blueprint $table) {
+        Schema::create('accepted_requests', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('client_name');
