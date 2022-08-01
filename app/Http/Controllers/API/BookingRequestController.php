@@ -33,8 +33,6 @@ class BookingRequestController extends Controller
             'wedding_date' => 'required',
             'number_guests' => 'required',
             'budget' => 'required',
-            'ceremony_location' => 'required',
-            'reception_location' => 'required',
         ]);
         try{
         $newBookingRequest = new BookingRequest([
@@ -43,8 +41,6 @@ class BookingRequestController extends Controller
             'wedding_date' => $request->get('wedding_date'),
             'number_guests' => $request->get('number_guests'),
             'budget' => $request->get('budget'),
-            'ceremony_location' => $request->get('ceremony_location'),
-            'reception_location' => $request->get('reception_location'),
         ]);
         $newBookingRequest->save();
         return response()->json($newBookingRequest);
@@ -84,16 +80,12 @@ class BookingRequestController extends Controller
             'wedding_date' => 'required',
             'number_guests' => 'required',
             'budget' => 'required',
-            'ceremony_location' => 'required',
-            'reception_location' => 'required',
         ]);
             $bookingrequest->client_name = $request->get('client_name');
             $bookingrequest->client_email = $request->get('client_email');
             $bookingrequest->wedding_date = $request->get('wedding_date');
             $bookingrequest->number_guests = $request->get('number_guests');
             $bookingrequest->budget = $request->get('budget');
-            $bookingrequest->ceremony_location = $request->get('ceremony_location');
-            $bookingrequest->reception_location = $request->get('reception_location');
             
             $bookingrequest->save();
             return response()->json($bookingrequest);

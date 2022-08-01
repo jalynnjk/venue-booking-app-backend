@@ -14,7 +14,5 @@ class AcceptedRequest extends Model
         'wedding_date',
         'number_guests',
         'budget',
-        'ceremony_location',
-        'reception_location',
     ];
 }

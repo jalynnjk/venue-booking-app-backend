@@ -25,8 +25,6 @@ class BookingRequestFactory extends Factory
             'wedding_date' => $this->faker->date(),
             'number_guests' => $this->faker->numerify('###'),
             'budget' => $this->faker->numerify('#####'),
-            'ceremony_location' => $this->faker->text(),
-            'reception_location' => $this->faker->text(),
         ];
     }
 }
