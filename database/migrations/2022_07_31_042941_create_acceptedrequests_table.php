@@ -22,8 +22,6 @@ return new class extends Migration
             $table->date('wedding_date');
             $table->integer('budget');
             $table->integer('number_guests');
-            $table->string('ceremony_location');
-            $table->string('reception_location');
         });
     }
 
