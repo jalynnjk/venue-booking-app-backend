@@ -43,8 +43,6 @@ class AcceptedRequestController extends Controller
             'wedding_date' => $request->get('wedding_date'),
             'number_guests' => $request->get('number_guests'),
             'budget' => $request->get('budget'),
-            'ceremony_location' => $request->get('ceremony_location'),
-            'reception_location' => $request->get('reception_location'),
         ]);
         $newAcceptedRequest->save();
         return response()->json($newAcceptedRequest);
@@ -84,16 +82,12 @@ class AcceptedRequestController extends Controller
             'wedding_date' => 'required',
             'number_guests' => 'required',
             'budget' => 'required',
-            'ceremony_location' => 'required',
-            'reception_location' => 'required',
         ]);
             $acceptedrequest->client_name = $request->get('client_name');
             $acceptedrequest->client_email = $request->get('client_email');
             $acceptedrequest->wedding_date = $request->get('wedding_date');
             $acceptedrequest->number_guests = $request->get('number_guests');
             $acceptedrequest->budget = $request->get('budget');
-            $acceptedrequest->ceremony_location = $request->get('ceremony_location');
-            $acceptedrequest->reception_location = $request->get('reception_location');
             
             $acceptedrequest->save();
             return response()->json($acceptedrequest);
