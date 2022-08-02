@@ -33,8 +33,6 @@ class AcceptedRequestController extends Controller
             'wedding_date' => 'required',
             'number_guests' => 'required',
             'budget' => 'required',
-            'ceremony_location' => 'required',
-            'reception_location' => 'required',
         ]);
         try{
         $newAcceptedRequest = new AcceptedRequest([
