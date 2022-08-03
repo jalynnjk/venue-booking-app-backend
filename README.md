@@ -5,6 +5,7 @@ This is the backend for my venue booking web application, where the API requests
 
 ## Live Deployment
 Supported routes include: '/api/booking_requests' and '/api/accepted_requests'
+
 https://thechapel-backend.herokuapp.com/
 
 ## Frontend Repository
